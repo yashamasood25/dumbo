@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dumbo — your credit card friend</title>
+  <meta name="description" content="Dumbo tells you which credit card to use before you pay, and reminds you to pay down before your statement. No login, no bank link.">
+  <meta name="theme-color" content="#0D0E11">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Dumbo">
+  <meta property="og:title" content="Dumbo — stop paying with the wrong card">
+  <meta property="og:description" content="Pick your cards once. Dumbo tells you which one to tap, every time.">
+  <meta property="og:image" content="icons/og.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="splash" class="splash" aria-hidden="true"><span class="wm">dumbo</span><span class="tagline">YOUR CREDIT CARD FRIEND</span></div>
+  <main id="app" aria-live="polite"></main>
+  <nav id="tabs" class="tabs" aria-label="Main" hidden>
+    <button data-tab="pay" class="tab">Pay</button>
+    <button data-tab="wallet" class="tab">Wallet</button>
+  </nav>
+  <div id="sheet-root"></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script src="cards.js"></script>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
